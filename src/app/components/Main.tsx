@@ -1,7 +1,11 @@
 'use client';
 
+import { MainSection } from "./MainSection";
+
 export const Main = () => {
   return (
-    <main>main</main>
+    <main>
+      <MainSection />
+    </main>
   )
 }

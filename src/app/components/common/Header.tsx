@@ -1,7 +1,7 @@
 'use client';
 
 import Logo from '@/assets/logo.png'
-import { HeaderLogo, HeaderLogoImg, HeaderMenuNav, HeaderPreREgistraitionBtn, HeaderWrap } from "../styles/HeaderStyled";
+import { HeaderLogo, HeaderLogoImg, HeaderMenuNav, HeaderPreRegistraitionBtn, HeaderWrap } from "../../styles/HeaderStyled";
 import Link from 'next/link';
 
 export const Header = () => {
@@ -13,10 +13,10 @@ export const Header = () => {
         </HeaderLogo>
         <HeaderMenuNav>
           <Link href="#About">기능소개</Link>
-          <Link href="#About">서비스특징</Link>
-          <Link href="#About">사전신청</Link>
+          <Link href="#Service">서비스특징</Link>
+          <Link href="#PreRegsiter">사전신청</Link>
         </HeaderMenuNav>
-        <HeaderPreREgistraitionBtn>사전신청</HeaderPreREgistraitionBtn>
+        <HeaderPreRegistraitionBtn>사전신청</HeaderPreRegistraitionBtn>
     </HeaderWrap>
   )
 }

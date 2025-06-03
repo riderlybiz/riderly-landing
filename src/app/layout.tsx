@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Header } from "./components/Header";
+import { Header } from "./components/common/Header";
 import StyledComponentsRegistry from "./lib/registry";
 
 import { Noto_Sans_KR } from 'next/font/google';

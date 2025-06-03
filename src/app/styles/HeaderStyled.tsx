@@ -21,6 +21,7 @@ export const HeaderLogo = styled(Link)`
     gap: 12px;
     font-weight: 700;
     font-size: 20px;
+    color: #fff;
 `
 
 export const HeaderLogoImg = styled(Image)`
@@ -37,19 +38,19 @@ export const HeaderMenuNav = styled.nav`
     a {
         font-weight: 700;
         font-size: 20px;
-        color: #989898;
+        color: #c5c5c5;
         transition: 0.3s;
 
         &:hover {
-            color: #000;
+            color: #fff;
         }
     }
 `
 
-export const HeaderPreREgistraitionBtn = styled.button`
-    padding: 8px 16px;
+export const HeaderPreRegistraitionBtn = styled.button`
+    padding: 12px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 999px;
     font-size: 16px;
     color: #fff;
     background-color: #7061EF;
