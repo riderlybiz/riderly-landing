@@ -14,6 +14,8 @@ export const HeaderLogo = styled(Link)`
     display: flex;
     align-items: center;
     gap: 12px;
+    font-weight: 700;
+    font-size: 20px;
 `
 
 export const HeaderLogoImg = styled(Image)`
@@ -25,11 +27,17 @@ export const HeaderLogoImg = styled(Image)`
 export const HeaderMenuNav = styled.nav`
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 32px;
 
     a {
         font-weight: 700;
-        color: #959595;
+        font-size: 20px;
+        color: #989898;
+        transition: 0.3s;
+
+        &:hover {
+            color: #000;
+        }
     }
 `
 
