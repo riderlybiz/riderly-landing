@@ -3,11 +3,16 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const HeaderWrap = styled.header`
+    width: 100dvw;
     height: 80px;
     padding: 0 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
 `;
 
 export const HeaderLogo = styled(Link)`
