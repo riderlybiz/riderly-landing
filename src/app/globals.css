@@ -1,116 +1,52 @@
-* {
-            font-family: 'Noto Sans KR', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-        .gradient-bg {
-            background: linear-gradient(135deg, #4B39EF 0%, #EE8B60 100%);
-        }
-
-        .gradient-orange {
-            background: linear-gradient(135deg, #4B39EF 0%, #EE8B60 100%);
-        }
-
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: #6F61EF;
-            color: #FFFFFF;
-        }
-
-        .btn-primary:hover {
-            background: #584DD6;
-        }
-
-        .btn-secondary {
-            background: #39D2C0;
-            color: #FFFFFF;
-        }
-
-        .btn-secondary:hover {
-            background: #2CB3A7;
-        }
-
-        .text-primary {
-            color: #15161E;
-        }
-
-        .text-secondary {
-            color: #606A85;
-        }
-
-        .text-white {
-            color: #FFFFFF;
-        }
-
-        .bg-primary {
-            background-color: #F1F4F8;
-        }
-
-        .bg-secondary {
-            background-color: #FFFFFF;
-        }
-
-        .border-primary {
-            border-color: #15161E;
-        }
-
-        .border-secondary {
-            border-color: #606A85;
-        }
-
-        .border-light {
-            border-color: #E5E7EB;
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .animate-pulse-slow {
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        /* 기본 Navigation 스타일 */
-        nav {
-            position: absolute;
-            /* Hero Section 위에 위치 */
-            top: 0;
-            width: 100%;
-            z-index: 50;
-            background: transparent;
-            /* 초기에는 투명 */
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* 스크롤 시 Navigation 스타일 */
-        nav.scrolled {
-            position: fixed;
-            /* 스크롤 시 고정 */
-            background: rgba(0, 0, 0, 0.8);
-            /* 스크롤 시 배경색 추가 */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* 스크롤 시 그림자 추가 */
-            backdrop-filter: blur(10px);
-            /* 블러 효과 */
-        }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}

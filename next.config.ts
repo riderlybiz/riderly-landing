@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
   compiler: {
     styledComponents: true,
+  },
+  images: {
+    localPatterns: [
+      {
+        pathname: '/assets/imgs/**',
+        search: ''
+      }
+    ]
   }
 };
 
