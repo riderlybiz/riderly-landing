@@ -2,6 +2,7 @@
 
 import { MainWrap } from "../styles/MainStyled";
 import { CartoonSection } from "./CartoonSection";
+import { FunctionSection } from "./FunctionSection";
 import { MainSection } from "./MainSection";
 
 export const Main = () => {
@@ -9,6 +10,7 @@ export const Main = () => {
     <MainWrap>
       <MainSection />
       <CartoonSection />
+      <FunctionSection />
     </MainWrap>
   )
 }
