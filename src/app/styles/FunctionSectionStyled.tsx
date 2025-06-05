@@ -28,6 +28,20 @@ export const FunctionSectionSubText = styled.p`
     color: #6B747F;
 `
 
+export const FunctionSectionCardWrap = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+`
+
 export const FunctionSectionCard = styled.div`
-    
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px 0px #d5d5d5;
+    background-color: #fff;
 `
