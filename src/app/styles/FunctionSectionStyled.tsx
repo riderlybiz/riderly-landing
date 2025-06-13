@@ -29,19 +29,55 @@ export const FunctionSectionSubText = styled.p`
 `
 
 export const FunctionSectionCardWrap = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: calc(900px + 40px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 `
 
 export const FunctionSectionCard = styled.div`
-    width: 100%;
-    max-width: 600px;
+    width: 300px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px 0px #d5d5d5;
+    box-sizing: border-box;
     background-color: #fff;
+`
+
+export const FunctionIconWrap = styled.div`
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    background: #5E43DE;
+    background: linear-gradient(90deg, rgba(94, 67, 222, 1) 0%, rgba(199, 119, 130, 1) 100%);
+`
+
+export const FunctionTitle = styled.p`
+    font-weight: 600;
+    font-size: 22px;
+`
+
+export const FunctionDescription = styled.p`
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+`
+
+export const FunctionTextList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: inside;
+`
+
+export const FunctionTextItem = styled.li`
+    font-size: 16px;
+    color: #959595;
 `
