@@ -11,7 +11,8 @@ const nextConfig: NextConfig = {
         pathname: '/assets/imgs/**',
         search: ''
       }
-    ]
+    ],
+    unoptimized: true,
   },
   output: 'export',
   distDir: 'docs'
