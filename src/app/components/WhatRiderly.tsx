@@ -32,7 +32,7 @@ export const WhatRiderly = () => {
             </WhatRiderlyList>
             <WhatRiderlyDashbordWrap>
                 <WhatRiderlyMainCard>
-                    <Image src={Logo.src} alt="Logo" width={100} height={100} />
+                    <Image src="./logo.png" alt="Logo" width={100} height={100} />
                     <WhatRiderlyTextWrap>
                         <WhatRiderlyCardTitle>Connect, Ride. Share.</WhatRiderlyCardTitle>
                         <WhatRiderlyCardDescription>라이더들을 연결하고, 함께 달리며, 경험을 나누는 새로운 모터사이클 커뮤니티의 시작</WhatRiderlyCardDescription>

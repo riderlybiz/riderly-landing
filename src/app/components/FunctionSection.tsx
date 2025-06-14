@@ -2,13 +2,6 @@ import React from 'react'
 import Image from 'next/image';
 import { FunctionDescription, FunctionIconWrap, FunctionSectionCard, FunctionSectionCardWrap, FunctionSectionSubText, FunctionSectionTxtTitle, FunctionSectionTxtWrap, FunctionSectionWrap, FunctionTextItem, FunctionTextList, FunctionTitle } from '../styles/FunctionSectionStyled'
 
-import whitePlus from '@/assets/icons/white_plus.png';
-import whiteSearch from '@/assets/icons/white_search.png';
-import whiteChat from '@/assets/icons/white_chat.png';
-import whiteLocation from '@/assets/icons/white_location.png';
-import whiteGroup from '@/assets/icons/white_group.png';
-import whiteFlag from '@/assets/icons/white_flag.png';
-
 export const FunctionSection = () => {
   return (
     <FunctionSectionWrap id='function-sec'>
@@ -19,7 +12,7 @@ export const FunctionSection = () => {
         <FunctionSectionCardWrap>
           <FunctionSectionCard>
             <FunctionIconWrap>
-              <Image src={whitePlus.src} alt='Plus' width={whitePlus.width} height={whitePlus.height} />
+              <Image src="./icons/white_plus.png" alt='Plus' width={26} height={26} />
             </FunctionIconWrap>
             <FunctionTitle>벙개 생성</FunctionTitle>
             <FunctionDescription>집결지, 경유지, 목적지를 설정하고 선호 성향을 태그로 선택해 나만의 라이딩 모임을 만들어보세요.</FunctionDescription>
@@ -31,7 +24,7 @@ export const FunctionSection = () => {
           </FunctionSectionCard>
           <FunctionSectionCard>
             <FunctionIconWrap>
-              <Image src={whiteSearch.src} alt='Plus' width={whiteSearch.width} height={whiteSearch.height} />
+              <Image src="./icons/white_search.png" alt='Plus' width={26} height={26} />
             </FunctionIconWrap>
             <FunctionTitle>스마트 검색</FunctionTitle>
             <FunctionDescription>내 위치, 선호 성향, 바이크 종류를 기반으로 딱 맞는 벙개를 찾아드립니다.</FunctionDescription>
@@ -43,7 +36,7 @@ export const FunctionSection = () => {
           </FunctionSectionCard>
           <FunctionSectionCard>
             <FunctionIconWrap>
-              <Image src={whiteChat.src} alt='Plus' width={whiteChat.width} height={whiteChat.height} />
+              <Image src="./icons/white_chat.png" alt='Plus' width={26} height={26} />
             </FunctionIconWrap>
             <FunctionTitle>실시간 채팅</FunctionTitle>
             <FunctionDescription>벙개 참여자들과 실시간으로 소통하고 라이딩 계획을 함께 세워보세요.</FunctionDescription>
@@ -55,7 +48,7 @@ export const FunctionSection = () => {
           </FunctionSectionCard>
           <FunctionSectionCard>
             <FunctionIconWrap>
-              <Image src={whiteLocation.src} alt='Plus' width={whiteLocation.width} height={whiteLocation.height} />
+              <Image src="./icons/white_location.png" alt='Plus' width={26} height={26} />
             </FunctionIconWrap>
             <FunctionTitle>위치 공유</FunctionTitle>
             <FunctionDescription>라이딩 중 실시간으로 위치를 공유하여 안전하고 편리한 투어를 즐기세요.</FunctionDescription>
@@ -67,7 +60,7 @@ export const FunctionSection = () => {
           </FunctionSectionCard>
           <FunctionSectionCard>
             <FunctionIconWrap>
-              <Image src={whiteGroup.src} alt='Plus' width={whiteGroup.width} height={whiteGroup.height} />
+              <Image src="./icons/white_group.png" alt='Plus' width={26} height={26} />
             </FunctionIconWrap>
             <FunctionTitle>프로필 & 팔로우</FunctionTitle>
             <FunctionDescription>다른 라이더들의 프로필을 확인하고 팔로우하여 지속적인 관계를 만들어가세요.</FunctionDescription>
@@ -79,7 +72,7 @@ export const FunctionSection = () => {
           </FunctionSectionCard>
           <FunctionSectionCard>
             <FunctionIconWrap>
-              <Image src={whiteFlag.src} alt='Plus' width={whiteFlag.width} height={whiteFlag.height} />
+              <Image src="./icons/white_flag.png" alt='Plus' width={26} height={26} />
             </FunctionIconWrap>
             <FunctionTitle>클럽 생성</FunctionTitle>
             <FunctionDescription>관심사가 비슷한 라이더들과 정기적인 모임을 위한 클럽을 만들어보세요.</FunctionDescription>

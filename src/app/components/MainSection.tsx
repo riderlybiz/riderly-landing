@@ -1,13 +1,12 @@
 'use client';
 
 import { MainSectionBtn, MainSectionBtnWrap, MainSectionContent, MainSectionLogoImg, MainSectionSubText, MainSectionText, MainSectionTextWrap, MainSectionWrap } from '@/app/styles/MainSectionStyled';
-import Logo from '@/assets/logo.png'
 
 export const MainSection = () => {
   return (
     <MainSectionWrap id='main-sec'>
         <MainSectionContent>
-            <MainSectionLogoImg src={Logo.src} alt="Riderly" fill />
+            <MainSectionLogoImg src="./logo.png" alt="Riderly" fill />
             <MainSectionTextWrap>
                 <MainSectionText>
                     혼자 달리기 외로운<br />
