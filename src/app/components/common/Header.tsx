@@ -1,6 +1,5 @@
 'use client';
 
-import Logo from '@/assets/logo.png'
 import { HeaderLogo, HeaderLogoImg, HeaderMenuNav, HeaderPreRegistraitionBtn, HeaderWrap } from "../../styles/HeaderStyled";
 import { useEffect, useState } from 'react';
 
@@ -39,7 +38,7 @@ export const Header = () => {
   return (
     <HeaderWrap className={isScroll ? 'scroll' : ''}>
         <HeaderLogo className={isScroll ? 'scroll' : ''} href="/">
-          <HeaderLogoImg src={Logo.src} alt="Logo" fill />
+          <HeaderLogoImg src="./logo.png" alt="Logo" fill />
           Riderly
         </HeaderLogo>
         <HeaderMenuNav className={isScroll ? 'scroll' : ''}>
