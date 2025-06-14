@@ -96,3 +96,33 @@ export const WhatRiderlyCardDescription = styled.p`
     font-size: 16px;
     color: #b5b5b5;
 `
+
+export const WhatRiderlySubCardList = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+export const WhatRiderlySubCard = styled.div`
+    width: 30%;
+    padding: 36px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #ffffff13;
+`
+
+export const WhatRiderlySubCardTopText = styled.p`
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+`
+
+export const WhatRiderlySubCardBotText = styled.p`
+    font-weight: 400;
+    font-size: 16px;
+    color: #b5b5b5;
+`

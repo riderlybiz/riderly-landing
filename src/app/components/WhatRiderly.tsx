@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { WhatRiderlyCardDescription, WhatRiderlyCardTitle, WhatRiderlyContentWrap, WhatRiderlyDashbordWrap, WhatRiderlyDescription, WhatRiderlyItem, WhatRiderlyItemDescription, WhatRiderlyItemTitle, WhatRiderlyList, WhatRiderlyMainCard, WhatRiderlySectionWrap, WhatRiderlyTextWrap, WhatRiderlyTitle, WhatRiderlyTitleWrap } from "../styles/WhatRiderlyStyled";
+import { WhatRiderlyCardDescription, WhatRiderlyCardTitle, WhatRiderlyContentWrap, WhatRiderlyDashbordWrap, WhatRiderlyDescription, WhatRiderlyItem, WhatRiderlyItemDescription, WhatRiderlyItemTitle, WhatRiderlyList, WhatRiderlyMainCard, WhatRiderlySectionWrap, WhatRiderlySubCard, WhatRiderlySubCardBotText, WhatRiderlySubCardList, WhatRiderlySubCardTopText, WhatRiderlyTextWrap, WhatRiderlyTitle, WhatRiderlyTitleWrap } from "../styles/WhatRiderlyStyled";
 import Logo from '@/assets/logo.png';
 
 export const WhatRiderly = () => {
@@ -38,6 +38,20 @@ export const WhatRiderly = () => {
                         <WhatRiderlyCardDescription>라이더들을 연결하고, 함께 달리며, 경험을 나누는 새로운 모터사이클 커뮤니티의 시작</WhatRiderlyCardDescription>
                     </WhatRiderlyTextWrap>
                 </WhatRiderlyMainCard>
+                <WhatRiderlySubCardList>
+                    <WhatRiderlySubCard>
+                        <WhatRiderlySubCardTopText>6명</WhatRiderlySubCardTopText>
+                        <WhatRiderlySubCardBotText>최적 벙개 인원</WhatRiderlySubCardBotText>
+                    </WhatRiderlySubCard>
+                    <WhatRiderlySubCard>
+                        <WhatRiderlySubCardTopText>AI</WhatRiderlySubCardTopText>
+                        <WhatRiderlySubCardBotText>스마트 매칭</WhatRiderlySubCardBotText>
+                    </WhatRiderlySubCard>
+                    <WhatRiderlySubCard>
+                        <WhatRiderlySubCardTopText>24/7</WhatRiderlySubCardTopText>
+                        <WhatRiderlySubCardBotText>언제든 참여</WhatRiderlySubCardBotText>
+                    </WhatRiderlySubCard>
+                </WhatRiderlySubCardList>
             </WhatRiderlyDashbordWrap>
         </WhatRiderlyContentWrap>
     </WhatRiderlySectionWrap>
