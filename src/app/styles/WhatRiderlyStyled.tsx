@@ -32,7 +32,7 @@ export const WhatRiderlyDescription = styled.p`
 export const WhatRiderlyContentWrap = styled.div`
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 52px;
 `
 
 export const WhatRiderlyList = styled.ul`
@@ -54,6 +54,45 @@ export const WhatRiderlyItemTitle = styled.p`
 `
 
 export const WhatRiderlyItemDescription = styled.p`
+    font-size: 16px;
+    color: #b5b5b5;
+`
+
+export const WhatRiderlyDashbordWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+`
+
+export const WhatRiderlyMainCard = styled.div`
+    width: 400px;
+    height: 250px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #ffffff13;
+`
+
+export const WhatRiderlyTextWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+`
+
+export const WhatRiderlyCardTitle = styled.p`
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+`
+
+export const WhatRiderlyCardDescription = styled.p`
+    line-height: 20px;
     font-size: 16px;
     color: #b5b5b5;
 `
