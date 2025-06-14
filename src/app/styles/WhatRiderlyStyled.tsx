@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const WhatRiderlySectionWrap = styled.section`
     width: 100dvw;
-    padding: 60px 0;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    box-sizing: border-box;
     background: #5E43DE;
     background: linear-gradient(90deg, rgba(94, 67, 222, 1) 0%, rgba(199, 119, 130, 1) 100%);
 `
@@ -25,6 +26,7 @@ export const WhatRiderlyTitle = styled.h2`
 `
 
 export const WhatRiderlyDescription = styled.p`
+    text-align: center;
     font-size: 24px;
     color: #b5b5b5;
 `
@@ -33,6 +35,13 @@ export const WhatRiderlyContentWrap = styled.div`
     display: flex;
     align-items: center;
     gap: 52px;
+
+    @media (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 52px;
+    }
 `
 
 export const WhatRiderlyList = styled.ul`
@@ -75,6 +84,19 @@ export const WhatRiderlyMainCard = styled.div`
     border-radius: 16px;
     box-sizing: border-box;
     background-color: #ffffff13;
+
+    @media (max-width: 400px) {
+        width: 100%;
+        height: 250px;
+        padding: 20px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        border-radius: 16px;
+        box-sizing: border-box;
+        background-color: #ffffff13;
+    }
 `
 
 export const WhatRiderlyTextWrap = styled.div`

@@ -24,6 +24,7 @@ export const FunctionSectionTxtTitle = styled.h2`
 `
 
 export const FunctionSectionSubText = styled.p`
+    text-align: center;
     font-size: 24px;
     color: #6B747F;
 `
@@ -33,6 +34,14 @@ export const FunctionSectionCardWrap = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
+    @media (max-width: 960px) {
+        width: calc(100% - 60px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
 `
 
 export const FunctionSectionCard = styled.div`

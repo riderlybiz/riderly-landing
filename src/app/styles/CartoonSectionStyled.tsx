@@ -24,10 +24,24 @@ export const CartoonImageWrap = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
 `
 
 export const CartoonImage = styled(Image)`
     width: 500px !important;
     height: 382px !important;
     position: static !important;
+
+    @media (max-width: 550px) {
+        width: 100% !important;
+        height: auto !important;
+        position: static !important;
+    }
 `

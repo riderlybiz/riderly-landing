@@ -20,6 +20,26 @@ export const HeaderWrap = styled.header`
         border-bottom: 1px solid #b5b5b5;
         background-color: #fff;
     }
+
+    @media (max-width: 800px) {
+        width: 100dvw;
+        height: 80px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        z-index: 999;
+        transition: 0.3s;
+
+        &.scroll {
+            border-bottom: 1px solid #b5b5b5;
+            background-color: #fff;
+        }   
+    }
 `;
 
 export const HeaderLogo = styled(Link)`
@@ -64,6 +84,10 @@ export const HeaderMenuNav = styled.nav`
                 color: #000;
             }
         }
+    }
+
+    @media (max-width: 800px) {
+        display: none;
     }
 `
 
