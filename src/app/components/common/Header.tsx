@@ -2,7 +2,6 @@
 
 import Logo from '@/assets/logo.png'
 import { HeaderLogo, HeaderLogoImg, HeaderMenuNav, HeaderPreRegistraitionBtn, HeaderWrap } from "../../styles/HeaderStyled";
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export const Header = () => {
