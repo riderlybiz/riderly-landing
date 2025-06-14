@@ -13,6 +13,13 @@ export const HeaderWrap = styled.header`
     top: 0;
     left: 0;
     box-sizing: border-box;
+    z-index: 999;
+    transition: 0.3s;
+
+    &.scroll {
+        border-bottom: 1px solid #b5b5b5;
+        background-color: #fff;
+    }
 `;
 
 export const HeaderLogo = styled(Link)`
@@ -22,6 +29,11 @@ export const HeaderLogo = styled(Link)`
     font-weight: 700;
     font-size: 20px;
     color: #fff;
+    transition: 0.3s;
+
+    &.scroll {
+        color: #000;
+    }
 `
 
 export const HeaderLogoImg = styled(Image)`
@@ -43,6 +55,14 @@ export const HeaderMenuNav = styled.nav`
 
         &:hover {
             color: #fff;
+        }
+    }
+
+    &.scroll {
+        a {
+            &:hover {
+                color: #000;
+            }
         }
     }
 `
