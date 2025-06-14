@@ -147,4 +147,10 @@ export const WhatRiderlySubCardBotText = styled.p`
     font-weight: 400;
     font-size: 16px;
     color: #b5b5b5;
+
+    @media (max-width: 400px) {
+        font-weight: 400;
+        font-size: 14px;
+        color: #b5b5b5;
+    }
 `
