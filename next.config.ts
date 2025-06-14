@@ -16,7 +16,8 @@ const nextConfig: NextConfig = {
   },
   output: 'export',
   distDir: 'docs',
-  assetPrefix: 'https://riderlybiz.github.io/riderly-landing',
+  basePath: '/riderly-landing',
+  assetPrefix: '/riderly-landing/',
   trailingSlash: true,
 };
 
