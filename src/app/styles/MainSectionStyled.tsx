@@ -96,7 +96,7 @@ export const MainSectionBtnWrap = styled.div`
 `
 
 export const MainSectionBtn = styled.button`
-    width: 100%;
+    width: 360px;
     max-width: 360px;
     padding: 12px 24px;
     display: block;
@@ -108,4 +108,19 @@ export const MainSectionBtn = styled.button`
     box-sizing: border-box;
     background-color: #7061EF;
     cursor: pointer;
+
+    @media (max-width: 370px) {
+        width: 100%;
+        max-width: 350px;
+        padding: 12px 24px;
+        display: block;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        box-sizing: border-box;
+        background-color: #7061EF;
+        cursor: pointer;
+    }
 `

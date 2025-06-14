@@ -67,11 +67,14 @@ export const HeaderMenuNav = styled.nav`
     align-items: center;
     gap: 32px;
 
-    a {
+    button {
+        border: none;
         font-weight: 700;
         font-size: 20px;
         color: #c5c5c5;
+        background-color: transparent;
         transition: 0.3s;
+        cursor: pointer;
 
         &:hover {
             color: #fff;
@@ -79,7 +82,7 @@ export const HeaderMenuNav = styled.nav`
     }
 
     &.scroll {
-        a {
+        button {
             &:hover {
                 color: #000;
             }

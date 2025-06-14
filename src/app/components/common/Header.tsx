@@ -26,6 +26,17 @@ export const Header = () => {
     })
   }, []);
 
+  const handleClickAutoScroll = (id: string) => {
+    const element = document.querySelector<HTMLElement>(`#${id}`);
+
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80, // 예: 헤더 높이만큼 여유
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <HeaderWrap className={isScroll ? 'scroll' : ''}>
         <HeaderLogo className={isScroll ? 'scroll' : ''} href="/">
@@ -33,9 +44,9 @@ export const Header = () => {
           Riderly
         </HeaderLogo>
         <HeaderMenuNav className={isScroll ? 'scroll' : ''}>
-          <Link href="#About">기능소개</Link>
-          <Link href="#Service">서비스특징</Link>
-          <Link href="#PreRegsiter">사전신청</Link>
+          <button onClick={() => handleClickAutoScroll('function-sec')}>기능소개</button>
+          <button onClick={() => handleClickAutoScroll('wat-riderly-sec')} >서비스특징</button>
+          <button>사전신청</button>
         </HeaderMenuNav>
         <HeaderPreRegistraitionBtn>사전신청</HeaderPreRegistraitionBtn>
     </HeaderWrap>

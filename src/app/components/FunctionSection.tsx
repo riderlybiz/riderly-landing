@@ -11,7 +11,7 @@ import whiteFlag from '@/assets/icons/white_flag.png';
 
 export const FunctionSection = () => {
   return (
-    <FunctionSectionWrap>
+    <FunctionSectionWrap id='function-sec'>
         <FunctionSectionTxtWrap>
             <FunctionSectionTxtTitle>핵심 기능</FunctionSectionTxtTitle>
             <FunctionSectionSubText>라이더들이 정말 원하는 기능들만 모았습니다</FunctionSectionSubText>

@@ -5,7 +5,7 @@ import Logo from '@/assets/logo.png'
 
 export const MainSection = () => {
   return (
-    <MainSectionWrap>
+    <MainSectionWrap id='main-sec'>
         <MainSectionContent>
             <MainSectionLogoImg src={Logo.src} alt="Riderly" fill />
             <MainSectionTextWrap>

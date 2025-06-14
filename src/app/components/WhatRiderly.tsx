@@ -6,7 +6,7 @@ import Logo from '@/assets/logo.png';
 
 export const WhatRiderly = () => {
   return (
-    <WhatRiderlySectionWrap>
+    <WhatRiderlySectionWrap id='wat-riderly-sec'>
         <WhatRiderlyTitleWrap>
             <WhatRiderlyTitle>왜 Riderly인가요?</WhatRiderlyTitle>
             <WhatRiderlyDescription>기존 동호회의 부담스러운 점들을 해결한 새로운 라이더 커뮤니티</WhatRiderlyDescription>
