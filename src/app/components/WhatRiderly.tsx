@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { WhatRiderlyCardDescription, WhatRiderlyCardTitle, WhatRiderlyContentWrap, WhatRiderlyDashbordWrap, WhatRiderlyDescription, WhatRiderlyItem, WhatRiderlyItemDescription, WhatRiderlyItemTitle, WhatRiderlyList, WhatRiderlyMainCard, WhatRiderlySectionWrap, WhatRiderlySubCard, WhatRiderlySubCardBotText, WhatRiderlySubCardList, WhatRiderlySubCardTopText, WhatRiderlyTextWrap, WhatRiderlyTitle, WhatRiderlyTitleWrap } from "../styles/WhatRiderlyStyled";
-import Logo from '@/assets/logo.png';
 
 export const WhatRiderly = () => {
   return (
