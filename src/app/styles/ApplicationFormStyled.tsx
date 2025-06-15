@@ -22,9 +22,30 @@ export const ApplicationTitle = styled.h2`
 
 export const ApplicationDescription = styled.p`
     text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    color: #212121;
+`
+
+export const PreRegistrationMainTitle = styled.p`
+    text-align: center;
+    font-weight: 600;
     font-size: 24px;
     line-height: 28px;
-    color: #6B747F;
+    color: #212121;
+`
+
+export const PreRegistrationItemTitle = styled.p`
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #212121;
+`
+export const PreRegistrationItemDescription = styled.p`
+    text-align: center;
+    font-size: 16px;
+    color: #9E9E9E;
 `
 
 export const ApplicationFormCardWrap = styled.div`
