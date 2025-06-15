@@ -1,6 +1,7 @@
 'use client';
 
 import { MainWrap } from "../styles/MainStyled";
+// import { ApplicationForm } from "./ApplicationForm";
 import { CartoonSection } from "./CartoonSection";
 import { FunctionSection } from "./FunctionSection";
 import { MainSection } from "./MainSection";
@@ -13,6 +14,7 @@ export const Main = () => {
       <CartoonSection />
       <FunctionSection />
       <WhatRiderly />
+      {/* <ApplicationForm /> */}
     </MainWrap>
   )
 }
