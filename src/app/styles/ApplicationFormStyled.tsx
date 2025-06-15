@@ -117,6 +117,6 @@ export const ApplicationFormSubmitBtn = styled.button`
     font-size: 16px;
     color: #fff;
     box-sizing: border-box;
-    background-color: #7061EF;
+    background-color: #FF6F00;
     cursor: pointer;
 `
