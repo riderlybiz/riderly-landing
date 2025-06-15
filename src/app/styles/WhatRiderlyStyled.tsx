@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 export const WhatRiderlySectionWrap = styled.section`
@@ -8,8 +9,8 @@ export const WhatRiderlySectionWrap = styled.section`
     align-items: center;
     gap: 40px;
     box-sizing: border-box;
-    background: #5E43DE;
-    background: linear-gradient(90deg, rgba(94, 67, 222, 1) 0%, rgba(199, 119, 130, 1) 100%);
+    background: #FF6F00;
+    background: linear-gradient(320deg, rgba(255, 111, 0, 1) 0%, rgba(78, 52, 46, 1) 70%, rgba(33, 33, 33, 1) 82%);
 `
 
 export const WhatRiderlyTitleWrap = styled.div`
@@ -67,6 +68,32 @@ export const WhatRiderlyItemDescription = styled.p`
     color: #b5b5b5;
 `
 
+export const WhatRiderlyItemImageWrap = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+`
+
+export const WhatRiderlyItemImage = styled(Image)`
+    width: 300px !important;
+    height: auto !important;
+    position: static !important;
+    
+    @media (max-width: 550px) {
+        width: 75% !important;
+        height: auto !important;
+        position: static !important;
+    }
+`
+
 export const WhatRiderlyDashbordWrap = styled.div`
     display: flex;
     flex-direction: column;
@@ -83,7 +110,7 @@ export const WhatRiderlyMainCard = styled.div`
     gap: 16px;
     border-radius: 16px;
     box-sizing: border-box;
-    background-color: #ffffff13;
+    background-color:rgba(255, 255, 255, 0.2);
 
     @media (max-width: 400px) {
         width: 100%;
@@ -95,7 +122,7 @@ export const WhatRiderlyMainCard = styled.div`
         gap: 16px;
         border-radius: 16px;
         box-sizing: border-box;
-        background-color: #ffffff13;
+        background-color:rgba(255, 255, 255, 0.2);
     }
 `
 

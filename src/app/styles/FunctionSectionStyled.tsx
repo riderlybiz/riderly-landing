@@ -64,8 +64,8 @@ export const FunctionIconWrap = styled.div`
     justify-content: center;
     position: relative;
     border-radius: 8px;
-    background: #5E43DE;
-    background: linear-gradient(90deg, rgba(94, 67, 222, 1) 0%, rgba(199, 119, 130, 1) 100%);
+    background: #FF6F00;
+    background: linear-gradient(320deg, rgba(255, 111, 0, 1) 0%, rgba(78, 52, 46, 1) 80%, rgba(33, 33, 33, 1) 100%);
 `
 
 export const FunctionTitle = styled.p`

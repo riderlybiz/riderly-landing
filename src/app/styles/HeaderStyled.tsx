@@ -100,11 +100,11 @@ export const HeaderPreRegistraitionBtn = styled.button`
     border-radius: 999px;
     font-size: 16px;
     color: #fff;
-    background-color: #7061EF;
+    background-color: #FF6F00;
     transition: 0.3s;
     cursor: pointer;
 
     &:hover {
-        background-color: #6356d4;
+        background-color: #FF6F00;
     }
 `

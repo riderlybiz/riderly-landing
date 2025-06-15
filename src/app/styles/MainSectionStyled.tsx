@@ -7,9 +7,9 @@ export const MainSectionWrap = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #5E43DE;
-    background: linear-gradient(90deg,rgba(94, 67, 222, 1) 0%, rgba(199, 119, 130, 1) 100%);
-
+    background: #FF6F00;
+    background: linear-gradient(320deg, rgba(255, 111, 0, 1) 0%, rgba(78, 52, 46, 1) 70%, rgba(33, 33, 33, 1) 82%);
+    
     @media (max-width: 800px) {
         width: 100dvw;
         height: 100dvh;
@@ -18,8 +18,8 @@ export const MainSectionWrap = styled.section`
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        background: #5E43DE;
-        background: linear-gradient(90deg,rgba(94, 67, 222, 1) 0%, rgba(199, 119, 130, 1) 100%);
+        background: #FF6F00;
+        background: linear-gradient(320deg, rgba(255, 111, 0, 1) 0%, rgba(78, 52, 46, 1) 70%, rgba(33, 33, 33, 1) 82%);
     }
 `
 
@@ -106,7 +106,7 @@ export const MainSectionBtn = styled.button`
     font-size: 20px;
     color: #fff;
     box-sizing: border-box;
-    background-color: #7061EF;
+    background-color: #FF6F00;
     cursor: pointer;
 
     @media (max-width: 370px) {
@@ -120,7 +120,7 @@ export const MainSectionBtn = styled.button`
         font-size: 20px;
         color: #fff;
         box-sizing: border-box;
-        background-color: #7061EF;
+        background-color: #FF6F00;
         cursor: pointer;
     }
 `
