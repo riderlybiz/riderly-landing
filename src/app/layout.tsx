@@ -10,8 +10,23 @@ import { Footer } from "./components/common/Footer";
 const notoSansKr = Noto_Sans_KR({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Riderly - 라이더 벙개 모임 플랫폼",
-  description: "Riderly - 라이더 벙개 모임 플랫폼",
+  title: "라이더의, 라이더를 위한, 라이더에 의한, Riderly",
+  description: "모터사이클 라이더를 위한 라이딩 모임 소셜 플랫폼",
+  openGraph: {
+    title: "라이더의, 라이더를 위한, 라이더에 의한, Riderly",
+    description: "모터사이클 라이더를 위한 라이딩 모임 소셜 플랫폼",
+    url: "https://riderlybiz.github.io/riderly-landing/",
+    siteName: "Riderly",
+    images: [
+      {
+        url: "https://riderlybiz.github.io/riderly-landing/imgs/open_graph_thumnail.png",
+        width: 1200,
+        height: 600,
+        alt: "Riderly OG Image",
+      },
+    ],
+    type: "website",
+  }
 };
 
 export default function RootLayout({
