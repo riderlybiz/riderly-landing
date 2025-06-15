@@ -5,6 +5,7 @@ import StyledComponentsRegistry from "./lib/registry";
 
 import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
+import { Footer } from "./components/common/Footer";
 
 const notoSansKr = Noto_Sans_KR({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Header />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
       <GoogleAnalytics gaId="G-3LM2DF1EZW" />

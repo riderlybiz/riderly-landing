@@ -48,7 +48,7 @@ export const ApplicationForm = () => {
     }
 
   return (
-    <ApplicationFormWrap>
+    <ApplicationFormWrap id='application-form'>
       <ApplicationTitleWrap>
         <ApplicationTitle>사전 신청</ApplicationTitle>
         <ApplicationDescription>

@@ -34,7 +34,7 @@ export const Header = () => {
       });
     }
   };
-
+ 
   return (
     <HeaderWrap className={isScroll ? 'scroll' : ''}>
         <HeaderLogo className={isScroll ? 'scroll' : ''} href="/">
@@ -44,9 +44,9 @@ export const Header = () => {
         <HeaderMenuNav className={isScroll ? 'scroll' : ''}>
           <button onClick={() => handleClickAutoScroll('function-sec')}>기능소개</button>
           <button onClick={() => handleClickAutoScroll('wat-riderly-sec')} >서비스특징</button>
-          <button>사전신청</button>
+          <button onClick={() => handleClickAutoScroll('application-form')}>사전신청</button>
         </HeaderMenuNav>
-        <HeaderPreRegistraitionBtn>사전신청</HeaderPreRegistraitionBtn>
+        <HeaderPreRegistraitionBtn onClick={() => handleClickAutoScroll('application-form')}>사전신청</HeaderPreRegistraitionBtn>
     </HeaderWrap>
   )
 }
