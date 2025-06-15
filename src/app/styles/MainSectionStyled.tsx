@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const MainSectionWrap = styled.section`
     width: 100dvw;
-    height: 100dvh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
