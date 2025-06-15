@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: 'export',
+  basePath: '/riderly-landing',
   compiler: {
     styledComponents: true,
   },
@@ -14,11 +16,6 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true,
   },
-  output: 'export',
-  trailingSlash: true,
-  distDir: '/docs',
-  basePath: '/riderly-landing',
-  assetPrefix: '/riderly-landing',
 };
 
 export default nextConfig;
