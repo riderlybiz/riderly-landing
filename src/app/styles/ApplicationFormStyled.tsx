@@ -5,6 +5,7 @@ export const ApplicationFormWrap = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 `
 
 export const ApplicationTitleWrap = styled.div`
@@ -28,6 +29,7 @@ export const ApplicationDescription = styled.p`
 
 export const ApplicationFormCardWrap = styled.div`
     width: 100%;
+    max-width: 400px;
     padding: 24px;
     display: flex;
     flex-direction: column;
