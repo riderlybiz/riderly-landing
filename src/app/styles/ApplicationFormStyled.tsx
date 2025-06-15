@@ -27,11 +27,12 @@ export const ApplicationDescription = styled.p`
 `
 
 export const ApplicationFormCardWrap = styled.div`
+    width: 100%;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 24px;
     border-radius: 12px;
     background-color: #F9FAFB;
 `
@@ -41,6 +42,15 @@ export const ApplicationFormInputFlexWrap = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+
+    @media (max-width: 500px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
 `
 
 export const ApplicationFormCheckboxWrap = styled.div`
@@ -59,6 +69,13 @@ export const ApplicationFormCheckList = styled.ul`
     display: grid;
     row-gap: 8px;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: 500px) {
+        width: 100%;
+        display: grid;
+        row-gap: 8px;
+        grid-template-columns: 1fr 1fr;
+    }
 `
 
 export const ApplicationFormCheckItem = styled.li`
