@@ -146,7 +146,7 @@ export const ApplicationForm = () => {
           </ApplicationFormCheckList>
         </ApplicationFormCheckboxWrap>
         <TextArea value={etc} onChange={(e) => handleChangeValue(e, setEtc)}>추가 의견 (선택사항)</TextArea>
-        <ApplicationFormSubmitBtn onClick={handleClickAddApplication}>사전 신청 완료하기</ApplicationFormSubmitBtn>
+        <ApplicationFormSubmitBtn onClick={handleClickAddApplication}>🔔 사전 신청 완료하기</ApplicationFormSubmitBtn>
       </ApplicationFormCardWrap>
     </ApplicationFormWrap >
   )
