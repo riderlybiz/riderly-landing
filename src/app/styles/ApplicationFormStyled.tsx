@@ -22,6 +22,12 @@ export const ApplicationTitle = styled.h2`
 export const ApplicationDescription = styled.p`
     text-align: center;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 28 px;
     color: #6B747F;
+`
+
+export const ApplicationFormCardWrap = styled.div`
+    padding: 24px;
+    border-radius: 12px;
+    background-color: #F9FAFB;
 `
