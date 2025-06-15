@@ -1,53 +1,51 @@
 import React, { useState } from 'react'
-import { ApplicationDescription, ApplicationFormCardWrap, ApplicationFormCheckboxTitle, ApplicationFormCheckboxWrap, ApplicationFormCheckItem, ApplicationFormCheckList, ApplicationFormInputFlexWrap, ApplicationFormSubmitBtn, ApplicationFormWrap, ApplicationSelect, ApplicationSelectLabel, ApplicationSelectWrap, ApplicationTitle, ApplicationTitleWrap } from '../styles/ApplicationFormStyled'
+import { ApplicationDescription, PreRegistrationMainTitle, PreRegistrationItemTitle, PreRegistrationItemDescription, ApplicationFormCardWrap, ApplicationFormCheckboxTitle, ApplicationFormCheckboxWrap, ApplicationFormCheckItem, ApplicationFormCheckList, ApplicationFormInputFlexWrap, ApplicationFormSubmitBtn, ApplicationFormWrap, ApplicationSelect, ApplicationSelectLabel, ApplicationSelectWrap, ApplicationTitle, ApplicationTitleWrap } from '../styles/ApplicationFormStyled'
 import { InputText } from './common/InputText'
 import { TextArea } from './common/TextArea';
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 
 export const ApplicationForm = () => {
-    const [name, setName] = useState('');
-    const [telNumber, setTelNumber] = useState('');
-    const [email, setEmail] = useState('');
-    const [functionList, setFunctionList] = useState([]);
-    const [bikeExperience, setBikeExperience] = useState('');
-    const [etc, setEtc] = useState('');
+  const [name, setName] = useState('');
+  const [telNumber, setTelNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [functionList, setFunctionList] = useState([]);
+  const [bikeExperience, setBikeExperience] = useState('');
+  const [etc, setEtc] = useState('');
 
-    // 유저 폼 생성
-    const handleClickAddApplication = async () => {
-      if (name && telNumber && email) {
-        try {
-          await setDoc(doc(db, 'users', `${telNumber}`), {
-            name: name,
-            phoneNumber: telNumber,
-            email: email,
-            functions: functionList,
-            bikeExperience: bikeExperience,
-            etc: etc
-          })
-
-          alert('사전 신청이 완료되었습니다.');
-        } catch (err: unknown) {
-          console.error("Error adding document: ", err);
-        }
-      } else {
-        alert('필수값을 입력해주시길 바랍니다.');
+  // 유저 폼 생성
+  const handleClickAddApplication = async () => {
+    if (name && telNumber && email) {
+      try {
+        await setDoc(doc(db, 'users', `${telNumber}`), {
+          name: name,
+          phoneNumber: telNumber,
+          email: email,
+          functions: functionList,
+          bikeExperience: bikeExperience,
+          etc: etc
+        })
+      } catch (err: unknown) {
+        console.error("Error adding document: ", err);
       }
+    } else {
+      alert('필수값을 입력해주시길 바랍니다.');
     }
+  }
 
-    const handleChangeValue = (value: string, setState: React.Dispatch<React.SetStateAction<string>>) => {
-      setState(value);
+  const handleChangeValue = (value: string, setState: React.Dispatch<React.SetStateAction<string>>) => {
+    setState(value);
+  }
+
+  const handleClickAddFunction = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value, checked } = e.target;
+
+    if (checked) {
+      setFunctionList((prev) => [...prev, value]);
+    } else {
+      setFunctionList((prev) => prev.filter((item) => item !== value));
     }
-
-    const handleClickAddFunction = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const { value, checked } = e.target;
-
-      if (checked) {
-        setFunctionList((prev) => [...prev, value]);
-      } else {
-        setFunctionList((prev) => prev.filter((item) => item !== value));
-      }
-    }
+  }
 
   return (
     <ApplicationFormWrap id='application-form'>
@@ -57,6 +55,31 @@ export const ApplicationForm = () => {
           Riderly 출시 소식을 가장 먼저 받아보세요!<br />
           사전 신청자에게는 특별한 혜택을 준비했습니다.
         </ApplicationDescription>
+        <PreRegistrationMainTitle>
+          🎁 사전 신청 혜택
+        </PreRegistrationMainTitle>
+        <PreRegistrationItemDescription>
+          출시 초기 한정 특별 혜택을 놓치지 마세요!
+        </PreRegistrationItemDescription>
+        <PreRegistrationItemTitle>
+          🚀 베타 테스터
+        </PreRegistrationItemTitle>
+        <PreRegistrationItemDescription>
+          정식 출시 전 체험 기회
+        </PreRegistrationItemDescription>
+        <PreRegistrationItemTitle>
+          💰 프리미엄 무료
+        </PreRegistrationItemTitle>
+        <PreRegistrationItemDescription>
+          3개월 무료 이용권
+        </PreRegistrationItemDescription>
+        <PreRegistrationItemTitle>
+          🏆 창립 멤버
+        </PreRegistrationItemTitle>
+        <PreRegistrationItemDescription>
+          특별 배지 및 혜택
+        </PreRegistrationItemDescription>
+        <br />
       </ApplicationTitleWrap>
       <ApplicationFormCardWrap>
         <ApplicationFormInputFlexWrap>
@@ -125,6 +148,6 @@ export const ApplicationForm = () => {
         <TextArea value={etc} onChange={(e) => handleChangeValue(e, setEtc)}>추가 의견 (선택사항)</TextArea>
         <ApplicationFormSubmitBtn onClick={handleClickAddApplication}>사전 신청 완료하기</ApplicationFormSubmitBtn>
       </ApplicationFormCardWrap>
-    </ApplicationFormWrap>
+    </ApplicationFormWrap >
   )
 }
