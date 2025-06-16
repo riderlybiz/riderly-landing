@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ApplicationDescription, PreRegistrationMainTitle, PreRegistrationItemTitle, PreRegistrationItemDescription, ApplicationFormCardWrap, ApplicationFormCheckboxTitle, ApplicationFormCheckboxWrap, ApplicationFormCheckItem, ApplicationFormCheckList, ApplicationFormInputFlexWrap, ApplicationFormSubmitBtn, ApplicationFormWrap, ApplicationSelect, ApplicationSelectLabel, ApplicationSelectWrap, ApplicationTitle, ApplicationTitleWrap } from '../styles/ApplicationFormStyled'
 import { InputText } from './common/InputText'
 import { TextArea } from './common/TextArea';
+import ConsentModal from "./ConsentModal";
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 
@@ -12,23 +13,36 @@ export const ApplicationForm = () => {
   const [functionList, setFunctionList] = useState([]);
   const [bikeExperience, setBikeExperience] = useState('');
   const [etc, setEtc] = useState('');
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleConsentSubmit = async (consent) => {
+    // consent.agreeRequired, consent.agreeMarketing 값 활용
+    // 사전 신청 처리 로직 작성
+    if (!consent.agreeRequired) {
+      alert('필수 동의 항목에 동의해주시길 바랍니다.');
+      return;
+    } 
+    try {
+      await setDoc(doc(db, 'users', `${telNumber}`), {
+        name: name,
+        phoneNumber: telNumber,
+        email: email,
+        functions: functionList,
+        bikeExperience: bikeExperience,
+        etc: etc,
+        consentRequired: consent.agreeRequired,
+        consentMarketing: consent.agreeMarketing,
+      });
+      alert('사전 신청이 완료되었습니다! 🎉');
+    } catch (err: unknown) {
+      console.error("Error adding document: ", err);
+    }
+  };
 
   // 유저 폼 생성
-  const handleClickAddApplication = async () => {
+  const handleClickAddApplication = () => {
     if (name && telNumber && email) {
-      try {
-        await setDoc(doc(db, 'users', `${telNumber}`), {
-          name: name,
-          phoneNumber: telNumber,
-          email: email,
-          functions: functionList,
-          bikeExperience: bikeExperience,
-          etc: etc
-        });
-        alert('사전 신청이 완료되었습니다! 🎉');
-      } catch (err: unknown) {
-        console.error("Error adding document: ", err);
-      }
+      setModalOpen(true);
     } else {
       alert('필수값을 입력해주시길 바랍니다.');
     }
@@ -148,6 +162,11 @@ export const ApplicationForm = () => {
         </ApplicationFormCheckboxWrap>
         <TextArea value={etc} onChange={(e) => handleChangeValue(e, setEtc)}>추가 의견 (선택사항)</TextArea>
         <ApplicationFormSubmitBtn onClick={handleClickAddApplication}>🔔 사전 신청 완료하기</ApplicationFormSubmitBtn>
+        <ConsentModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onSubmit={handleConsentSubmit}
+        />
       </ApplicationFormCardWrap>
     </ApplicationFormWrap >
   )
