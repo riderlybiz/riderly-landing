@@ -24,7 +24,8 @@ export const ApplicationForm = () => {
           functions: functionList,
           bikeExperience: bikeExperience,
           etc: etc
-        })
+        });
+        alert('사전 신청이 완료되었습니다! 🎉');
       } catch (err: unknown) {
         console.error("Error adding document: ", err);
       }
