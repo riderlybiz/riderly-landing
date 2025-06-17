@@ -24,8 +24,9 @@ export const RedirectClient = ({ join }: { join: string }) => {
         }
     };
     useEffect(() => {
-        const url = window.location.origin + window.location.pathname + getRedirectUrl(join);
-        window.location.href = url;
+        const REDIRECT_BASE = process.env.NODE_ENV === 'production' ? 'https://riderlybiz.github.io/riderly-landing' : window.location.origin;
+        const query  = getRedirectUrl(join);
+        window.location.href = `${REDIRECT_BASE}/${query}`;
     }, [join]);
 
     return <p>Redirecting to Riderly...</p>;
