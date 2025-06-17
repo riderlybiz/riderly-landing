@@ -1,4 +1,5 @@
-import { RedirectClient } from './components/RedirectClient';
+import { replaceUtmUrl } from './components/replaceUtmUrl';
+import { Main } from "../components/Main";
 
 export const dynamicParams = false;
 
@@ -8,6 +9,7 @@ export async function generateStaticParams() {
     { join: 'naver' },
     { join: 'instagram' },
     { join: 'instagram-profile' },
+    { join: 'instagram-content-vedio1' },
     { join: 'metavv' },
     { join: 'facebook' },
     { join: 'tiktok' },
@@ -20,7 +22,8 @@ export async function generateStaticParams() {
 }
 
 export default function RedirectPage({ params }: { params: { join: string } }) {
-    console.log(params)
-
-    return <RedirectClient join={params.join} />;
+  replaceUtmUrl({ join: params.join });
+  return (
+    <Main />
+  );
 };
