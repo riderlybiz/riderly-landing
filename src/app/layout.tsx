@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Header } from "./components/common/Header";
-import { GoogleAnalytics } from '@next/third-parties/google'
 import StyledComponentsRegistry from "./lib/registry";
 
 import { Noto_Sans_KR } from 'next/font/google';
@@ -43,7 +42,6 @@ export default function RootLayout({
           <Footer />
         </StyledComponentsRegistry>
       </body>
-      <GoogleAnalytics gaId="G-3LM2DF1EZW" />
     </html>
   );
 }
