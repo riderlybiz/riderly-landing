@@ -1,4 +1,3 @@
-import { replaceUtmUrl } from './components/replaceUtmUrl';
 import { Main } from "../components/Main";
 
 export const dynamicParams = false;
@@ -22,10 +21,9 @@ export async function generateStaticParams() {
 }
 
 export default function RedirectPage({ params }: { params: { join: string } }) {
-  // replaceUtmUrl({ join: params.join });
   return (
     <div>
-      <Main />
+      <Main join={params.join} />
     </div>
   );
 };
