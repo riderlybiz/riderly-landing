@@ -7,6 +7,13 @@ export async function generateStaticParams() {
     // 필요한 모든 경로 나열
     { join: 'naver' },
     { join: 'instagram' },
+    { join: 'instagram-profile' },
+    { join: 'facebook' },
+    { join: 'tiktok' },
+    { join: 'youtube' },
+    { join: 'blog' },
+    { join: 'twitter' },
+    { join: 'email' },
     { join: 'kakao' },
   ];
 }
