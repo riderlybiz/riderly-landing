@@ -8,6 +8,7 @@ export async function generateStaticParams() {
     { join: 'naver' },
     { join: 'instagram' },
     { join: 'instagram-profile' },
+    { join: 'metavv' },
     { join: 'facebook' },
     { join: 'tiktok' },
     { join: 'youtube' },
