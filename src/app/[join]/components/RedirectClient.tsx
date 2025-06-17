@@ -24,7 +24,7 @@ export const RedirectClient = ({ join }: { join: string }) => {
         }
     };
     useEffect(() => {
-        const url = window.location.origin + getRedirectUrl(join);
+        const url = window.location.origin + window.location.pathname + getRedirectUrl(join);
         window.location.href = url;
     }, [join]);
 
