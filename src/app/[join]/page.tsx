@@ -22,8 +22,10 @@ export async function generateStaticParams() {
 }
 
 export default function RedirectPage({ params }: { params: { join: string } }) {
-  replaceUtmUrl({ join: params.join });
+  // replaceUtmUrl({ join: params.join });
   return (
-    <Main />
+    <div>
+      <Main />
+    </div>
   );
 };
