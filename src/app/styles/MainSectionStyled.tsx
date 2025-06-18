@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const MainSectionWrap = styled.section`
     width: 100dvw;
-    height: 130vh;
+    height: 150vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@ export const MainSectionWrap = styled.section`
     
     @media (max-width: 800px) {
         width: 100dvw;
-        height: 110dvh;
+        height: 120dvh;
         padding: 20px;
         display: flex;
         align-items: center;
@@ -65,17 +65,58 @@ export const MainSectionText = styled.h2`
         color: #fff;
     }
 `
+export const MainCard = styled.div`
+    width: 100%;
+    height: 140px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color:rgba(255, 255, 255, 0.3);
+
+    @media (max-width: 800px) {
+        width: 100%;
+        height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        border-radius: 16px;
+        box-sizing: border-box;
+        background-color:rgba(255, 255, 255, 0.3);
+    }
+`
+
+export const MainCardSubText = styled.p`
+    text-align: center;
+    line-height: 48px;
+    font-weight: 500;
+    font-size: 30px;
+    color:rgba(33, 33, 33);
+
+    @media (max-width: 800px) {
+        text-align: center;
+        line-height: 26px;
+        font-weight: 500;
+        font-size: 16px;
+        color:rgba(33, 33, 33);
+    }
+`
 
 export const MainSectionSubText = styled.p`
     text-align: center;
     line-height: 48px;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 30px;
     color: #c5c5c5;
 
     @media (max-width: 800px) {
         text-align: center;
-        line-height: 28px;
+        line-height: 26px;
         font-weight: 500;
         font-size: 16px;
         color: #c5c5c5;
