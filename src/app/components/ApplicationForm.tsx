@@ -55,7 +55,7 @@ export const ApplicationForm = () => {
                 phoneNumber: telNumber,
                 email: email,
                 functions: functionList,
-                ownBike: bike,
+                ownBike: ownBike,
                 bikeExperience: bikeExperience,
                 etc: etc,
                 consentRequired: consent.agreeRequired,
