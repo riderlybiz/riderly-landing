@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {
     ApplicationDescription,
     PreRegistrationMainTitle,
@@ -18,11 +18,11 @@ import {
     ApplicationTitle,
     ApplicationTitleWrap
 } from '../styles/ApplicationFormStyled'
-import {InputText} from './common/InputText'
-import {TextArea} from './common/TextArea';
+import { InputText } from './common/InputText'
+import { TextArea } from './common/TextArea';
 import ConsentModal from "./ConsentModal";
-import {doc, setDoc} from 'firebase/firestore'
-import {db} from '@/lib/firebase'
+import { doc, setDoc } from 'firebase/firestore'
+import { db } from '@/lib/firebase'
 
 export const ApplicationForm = () => {
     const [name, setName] = useState('');
@@ -40,6 +40,13 @@ export const ApplicationForm = () => {
             alert('필수 동의 항목에 동의해주시길 바랍니다.');
             return;
         }
+        // 🔍 URL에서 UTM 파라미터 추출
+        const searchParams = new URLSearchParams(window.location.search);
+        const utmSource = searchParams.get('utm_source') || 'direct';
+        const utmMedium = searchParams.get('utm_medium') || 'none';
+        const utmCampaign = searchParams.get('utm_campaign') || 'none';
+        // 📆 신청일시 (UTC timestamp)
+        const submittedAt = new Date().toISOString();
         try {
             await setDoc(doc(db, 'users', `${telNumber}`), {
                 name: name,
@@ -50,6 +57,10 @@ export const ApplicationForm = () => {
                 etc: etc,
                 consentRequired: consent.agreeRequired,
                 consentMarketing: consent.agreeMarketing,
+                utmSource: utmSource,
+                utmMedium: utmMedium,
+                utmCampaign: utmCampaign,
+                submittedAt: submittedAt,
             });
             alert('사전 신청이 완료되었습니다! 🎉');
         } catch (err: unknown) {
@@ -71,7 +82,7 @@ export const ApplicationForm = () => {
     }
 
     const handleClickAddFunction = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const {value, checked} = e.target;
+        const { value, checked } = e.target;
 
         if (checked) {
             setFunctionList((prev) => [...prev, value]);
@@ -85,7 +96,7 @@ export const ApplicationForm = () => {
             <ApplicationTitleWrap>
                 <ApplicationTitle>사전 신청</ApplicationTitle>
                 <ApplicationDescription>
-                    Riderly 출시 소식을 가장 먼저 받아보세요!<br/>
+                    Riderly 출시 소식을 가장 먼저 받아보세요!<br />
                     사전 신청자에게는 특별한 혜택을 준비했습니다.
                 </ApplicationDescription>
             </ApplicationTitleWrap>
@@ -103,33 +114,33 @@ export const ApplicationForm = () => {
                     <ApplicationFormCheckList>
                         <ApplicationFormCheckItem>
                             <input type="checkbox" id='bung' value='벙개 생성/참여'
-                                   checked={functionList.includes('벙개 생성/참여')}
-                                   onChange={(e) => handleClickAddFunction(e)}/>
+                                checked={functionList.includes('벙개 생성/참여')}
+                                onChange={(e) => handleClickAddFunction(e)} />
                             <label htmlFor="bung">벙개 생성/참여</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="checkbox" id='ai' value="AI 매칭" checked={functionList.includes('AI 매칭')}
-                                   onChange={(e) => handleClickAddFunction(e)}/>
+                                onChange={(e) => handleClickAddFunction(e)} />
                             <label htmlFor="ai">AI 매칭</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="checkbox" id='chat' value="실시간 채팅" checked={functionList.includes('실시간 채팅')}
-                                   onChange={(e) => handleClickAddFunction(e)}/>
+                                onChange={(e) => handleClickAddFunction(e)} />
                             <label htmlFor="chat">실시간 채팅</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="checkbox" id='location' value='위치 공유' checked={functionList.includes('위치 공유')}
-                                   onChange={(e) => handleClickAddFunction(e)}/>
+                                onChange={(e) => handleClickAddFunction(e)} />
                             <label htmlFor="location">위치 공유</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="checkbox" id='club' value="클럽 기능" checked={functionList.includes('클럽 기능')}
-                                   onChange={(e) => handleClickAddFunction(e)}/>
+                                onChange={(e) => handleClickAddFunction(e)} />
                             <label htmlFor="club">클럽 기능</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="checkbox" id='feed' value="피드 공유" checked={functionList.includes('피드 공유')}
-                                   onChange={(e) => handleClickAddFunction(e)}/>
+                                onChange={(e) => handleClickAddFunction(e)} />
                             <label htmlFor="feed">피드 공유</label>
                         </ApplicationFormCheckItem>
                     </ApplicationFormCheckList>
@@ -151,17 +162,17 @@ export const ApplicationForm = () => {
                     <ApplicationFormCheckList>
                         <ApplicationFormCheckItem>
                             <input type="radio" id='bike-1' value='바린이(0년~2년)' checked={bikeExperience === '바린이(0년~2년)'}
-                                   onChange={(e) => handleChangeValue(e.target.value, setBikeExperience)}/>
+                                onChange={(e) => handleChangeValue(e.target.value, setBikeExperience)} />
                             <label htmlFor="bike-1">바린이(0년~2년)</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="radio" id='bike-2' value="중급자(3년~5년)" checked={bikeExperience === '중급자(3년~5년)'}
-                                   onChange={(e) => handleChangeValue(e.target.value, setBikeExperience)}/>
+                                onChange={(e) => handleChangeValue(e.target.value, setBikeExperience)} />
                             <label htmlFor="bike-2">중급자(3년~5년)</label>
                         </ApplicationFormCheckItem>
                         <ApplicationFormCheckItem>
                             <input type="radio" id='bike-3' value="상급자(6년~)" checked={bikeExperience === '상급자(6년~)'}
-                                   onChange={(e) => handleChangeValue(e.target.value, setBikeExperience)}/>
+                                onChange={(e) => handleChangeValue(e.target.value, setBikeExperience)} />
                             <label htmlFor="bike-3">상급자(6년~)</label>
                         </ApplicationFormCheckItem>
                     </ApplicationFormCheckList>
@@ -185,7 +196,7 @@ export const ApplicationForm = () => {
                     🥤커피 쿠폰
                 </PreRegistrationItemTitle>
                 <PreRegistrationItemDescription>
-                    20명 추첨하여 커피 쿠폰 제공<br/>
+                    20명 추첨하여 커피 쿠폰 제공<br />
                     * 마케팅 수신 동의 필요
                 </PreRegistrationItemDescription>
                 <PreRegistrationItemTitle>
