@@ -29,6 +29,7 @@ export const ApplicationForm = () => {
     const [telNumber, setTelNumber] = useState('');
     const [email, setEmail] = useState('');
     const [functionList, setFunctionList] = useState([]);
+    const [ownBike, setBike] = useState('');
     const [bikeExperience, setBikeExperience] = useState('');
     const [etc, setEtc] = useState('');
     const [modalOpen, setModalOpen] = useState(false);
@@ -54,6 +55,7 @@ export const ApplicationForm = () => {
                 phoneNumber: telNumber,
                 email: email,
                 functions: functionList,
+                ownBike: bike,
                 bikeExperience: bikeExperience,
                 etc: etc,
                 consentRequired: consent.agreeRequired,
@@ -149,7 +151,7 @@ export const ApplicationForm = () => {
                 </ApplicationFormCheckboxWrap>
                 <ApplicationSelectWrap>
                     <ApplicationSelectLabel>보유 바이크 (선택사항)</ApplicationSelectLabel>
-                    <ApplicationSelect>
+                    <ApplicationSelect value={ownBike} onChange={e => setBike(e.target.value)}>
                         <option value="">선택해주세요</option>
                         <option value="scooter">스쿠터 (125cc 이하)</option>
                         <option value="entry">엔트리급 (126-250cc)</option>
