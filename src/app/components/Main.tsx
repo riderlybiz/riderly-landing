@@ -17,6 +17,7 @@ export const Main = ({join}: { join: string }) => {
         <MainWrap>
             <GoogleAnalytics gaId="G-3LM2DF1EZW"/>
             <MainSection/>
+            <ApplicationForm/>
             <CartoonSection/>
             <WhatRiderly/>
             <ApplicationForm/>
