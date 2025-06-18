@@ -20,7 +20,7 @@ export const Main = ({join}: { join: string }) => {
             <ApplicationForm/>
             <CartoonSection/>
             <WhatRiderly/>
-            <ApplicationForm/>
+            {/* <ApplicationForm/> */}
             <FunctionSection/>
         </MainWrap>
     )
