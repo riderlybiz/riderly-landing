@@ -44,6 +44,7 @@ export const ApplicationForm = () => {
         const searchParams = new URLSearchParams(window.location.search);
         const utmSource = searchParams.get('utm_source') || 'direct';
         const utmMedium = searchParams.get('utm_medium') || 'none';
+        const utm_content = searchParams.get('utm_content') || 'none';
         const utmCampaign = searchParams.get('utm_campaign') || 'none';
         // 📆 신청일시 (UTC timestamp)
         const submittedAt = new Date().toISOString();
@@ -59,6 +60,7 @@ export const ApplicationForm = () => {
                 consentMarketing: consent.agreeMarketing,
                 utmSource: utmSource,
                 utmMedium: utmMedium,
+                utm_content: utm_content,
                 utmCampaign: utmCampaign,
                 submittedAt: submittedAt,
             });
