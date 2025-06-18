@@ -45,7 +45,7 @@ export const MainSection = () => {
                     </MainSectionSubText>
                     <MainSectionSubText>
                         9월 말 가을 시즌 출시 예정! 지금 신청하고<br/>
-                        베타 체험 & 프리미엄 기능 3개월 무 & 커피 쿠폰 받기 🎁
+                        베타 체험 & 프리미엄 기능 3개월 무료 & 커피 쿠폰 받기 🎁
                     </MainSectionSubText>
                 </MainSectionTextWrap>
             </MainSectionContent>
