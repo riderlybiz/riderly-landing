@@ -10,6 +10,12 @@
 !.yarn/releases
 !.yarn/versions
 
+#intelliJ
+.idea/
+
+# vscode
+.vscode/
+
 # testing
 /coverage
 
