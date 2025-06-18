@@ -12,7 +12,7 @@ export const MainSectionWrap = styled.section`
     
     @media (max-width: 800px) {
         width: 100dvw;
-        height: 70dvh;
+        height: 90dvh;
         padding: 20px;
         display: flex;
         align-items: center;
