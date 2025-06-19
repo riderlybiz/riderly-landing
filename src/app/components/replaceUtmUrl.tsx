@@ -8,7 +8,7 @@ export const replaceUtmUrl = ({ join }: { join: string }) => {
     const INSTAGRAM_PROFILE_URL = '?utm_source=instagram&utm_medium=profile&utm_campaign=prelaunch';
     const INSTAGRAM_CONTENT_VEDIO1_URL = '?utm_source=instagram&utm_medium=content&utm_campaign=prelaunch&utm_content=vedio1 ';
     const METAVV = '?utm_source=metavv&utm_campaign=prelaunch';
-    const MBTI = '?utm_source=mbti&utm_campaign=prelaunch';
+    const MBTI = '?utm_source=mbti&utm_medium=referral&utm_campaign=prelaunch';
 
     const getRedirectUrl = (join: string) => {
         if (!join) {
