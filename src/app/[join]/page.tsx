@@ -18,7 +18,8 @@ export async function generateStaticParams() {
     { join: 'twitter' },
     { join: 'email' },
     { join: 'kakao' },
-    { join: 'mbti'}
+    { join: 'mbti'},
+    { join: 'dcinside'}
   ];
 }
 
