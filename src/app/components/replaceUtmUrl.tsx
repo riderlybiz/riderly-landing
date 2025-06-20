@@ -7,6 +7,7 @@ export const replaceUtmUrl = ({ join }: { join: string }) => {
     const INSTAGRAM_URL = '?utm_source=instagram&utm_campaign=prelaunch';
     const INSTAGRAM_PROFILE_URL = '?utm_source=instagram&utm_medium=profile&utm_campaign=prelaunch';
     const INSTAGRAM_CONTENT_VEDIO1_URL = '?utm_source=instagram&utm_medium=content&utm_campaign=prelaunch&utm_content=vedio1 ';
+    const INSTAGRAM_CONTENT_SPOT_RECOMMEND1_URL = '?utm_source=instagram&utm_medium=content&utm_campaign=prelaunch&utm_content=spot_recommend1 ';
     const METAVV = '?utm_source=metavv&utm_campaign=prelaunch';
     const MBTI = '?utm_source=mbti&utm_medium=referral&utm_campaign=prelaunch';
 
@@ -21,6 +22,8 @@ export const replaceUtmUrl = ({ join }: { join: string }) => {
             return INSTAGRAM_PROFILE_URL;
         } else if (join === 'instagram-content-vedio1') {
             return INSTAGRAM_CONTENT_VEDIO1_URL;
+        } else if (join === 'instagram-content-spot-recommend1') {
+            return INSTAGRAM_CONTENT_SPOT_RECOMMEND1_URL;
         } else if (join === 'metavv') {
             return METAVV;
         } else if (join === 'mbti') {

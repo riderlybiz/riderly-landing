@@ -9,6 +9,7 @@ export async function generateStaticParams() {
     { join: 'instagram' },
     { join: 'instagram-profile' },
     { join: 'instagram-content-vedio1' },
+    { join: 'instagram-content-spot-recommend1' },
     { join: 'metavv' },
     { join: 'facebook' },
     { join: 'tiktok' },
