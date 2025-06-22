@@ -22,7 +22,9 @@ import { InputText } from './common/InputText'
 import { TextArea } from './common/TextArea';
 import ConsentModal from "./ConsentModal";
 import { doc, setDoc } from 'firebase/firestore'
-import { db } from '@/lib/firebase'
+import { getFirebaseApp } from '@/lib/firebase';
+
+const { db } = getFirebaseApp();
 
 export const ApplicationForm = () => {
     const [name, setName] = useState('');
