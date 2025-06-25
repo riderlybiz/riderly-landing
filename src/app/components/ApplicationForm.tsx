@@ -197,7 +197,7 @@ export const ApplicationForm = () => {
                     출시 초기 한정 특별 혜택을 놓치지 마세요!
                 </PreRegistrationItemDescription>
                 <PreRegistrationItemTitle>
-                    🥤커피 쿠폰
+                    🥤커피 쿠폰 (~2025-07-02)
                 </PreRegistrationItemTitle>
                 <PreRegistrationItemDescription>
                     20명 추첨하여 커피 쿠폰 제공<br />
@@ -210,7 +210,7 @@ export const ApplicationForm = () => {
                     정식 출시 전 베타 체험 기회 증정
                 </PreRegistrationItemDescription>
                 <PreRegistrationItemTitle>
-                    💰 프리미엄 무료
+                    💰 프리미엄 무료 (~2025-07-02)
                 </PreRegistrationItemTitle>
                 <PreRegistrationItemDescription>
                     Riderly 내에서 제공되는 라이딩 모임에 필요한 특별한 기능들을<br />
