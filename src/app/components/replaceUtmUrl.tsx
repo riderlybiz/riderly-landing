@@ -13,9 +13,7 @@ export const replaceUtmUrl = ({ join }: { join: string }) => {
     const DCINSIDE = '?utm_source=dcinside&utm_medium=organic-content&utm_campaign=prelaunch';
 
     const getRedirectUrl = (join: string) => {
-        if (!join) {
-            return DEFAULT_URL;
-        } else if (join === 'naver') {
+        if (join === 'naver') {
             return NAVER_CAFE_URL;
         } else if (join === 'instagram') {
             return INSTAGRAM_URL;
