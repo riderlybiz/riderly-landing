@@ -197,24 +197,17 @@ export const ApplicationForm = () => {
                     출시 초기 한정 특별 혜택을 놓치지 마세요!
                 </PreRegistrationItemDescription>
                 <PreRegistrationItemTitle>
-                    🥤커피 쿠폰 (~2025-07-02)
-                </PreRegistrationItemTitle>
-                <PreRegistrationItemDescription>
-                    20명 추첨하여 커피 쿠폰 제공<br />
-                    * 마케팅 수신 동의 필요
-                </PreRegistrationItemDescription>
-                <PreRegistrationItemTitle>
                     🚀 베타 테스터
                 </PreRegistrationItemTitle>
                 <PreRegistrationItemDescription>
                     정식 출시 전 베타 체험 기회 증정
                 </PreRegistrationItemDescription>
                 <PreRegistrationItemTitle>
-                    💰 3개월 프리미엄 무료 (~2025-07-02 이후엔 1개월로 축소 예정)
+                    💰 1개월 프리미엄 무료
                 </PreRegistrationItemTitle>
                 <PreRegistrationItemDescription>
                     Riderly 내에서 제공되는 무료 기능 외 라이딩 모임에 <br />
-                    필요한 특별한 유료 기능들을 무료로 체험해 수 있는 3개월 무료 이용권 지급
+                    필요한 특별한 유료 기능들을 무료로 체험해 수 있는 1개월 무료 이용권 지급
                 </PreRegistrationItemDescription>
                 <PreRegistrationItemTitle>
                     🏆 창립 멤버
